@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qr-Code</title>
+    <link rel="shortcut icon" href="qr-logo.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .box{
+            display:flex;
+            justify-content: center;
+            flex-direction: row;
+            /* flex-wrap: wrap;  */
+            align-items:center;
+            height: 100vh;
+            /* background-color: #12f234; */
+        }
+
+        .glass {
+            display: flex;
+            width: 500px;
+            height: 400px;
+            text-align: left;
+            background: rgba(222, 222, 222, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding:20px 40px;
+            border-radius: 10px;
+            /* margin-top: 130px; */
+            /* justify-content: space-evenly; */
+        }
+
+        h4 {
+            font-size: 27px;
+            margin: 60px 0px 20px 0px;
+            font-weight: bold;
+            color: #3f9f31;
+        }
+        input{
+            border-radius: 5px;
+            padding: 10px 45px;
+            border: 1px solid rgb(170, 170, 170);
+            width: 100%;
+            margin: 20px 0px;
+            /* margin: 40px 0px 30px 0px; */
+            /* background-color: transparent; */
+        }
+        button{
+            border-radius: 5px;
+            border: 1px solid black;
+            padding: 10px 20px 10px 20px ;
+            /* background-color: transparent; */
+        }
+        button{
+            background-color: #3f9f31;
+            border: 1px solid white;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="https://myqrmenu.gr/uploads/blog/1ae44e9cbe05c02d532b29ee591c9e61.jpg" alt="qrcode img" srcset=""><br> -->
+    <!-- <h1>QR-CODE GENERATOR</h1> -->
+     <div class="box">
+        <div class="glass">
+            <form action="/imgdata" method="post" class="">
+                <h4>Generate Your QR</h4>
+                <label for="">Create a QR code image by entering your data</label>
+                <input type="text" name="qrdata" required><br>
+    
+                <a href=""> <button type="submit">Generat Qr-Code</button></a>
+            </form>
+        </div>
+     </div>
+   
+</body>
+
+</html>
