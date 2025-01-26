@@ -18,9 +18,9 @@ app.use(express.static("src"))
 app.get('/', (req, res) => {
     res.render('index')
 
-})  
+})
 app.get('/Qr-code', (req, res) => {
-    res.render('Qr-code')
+    res.render('qr-code')
 
 })
 app.post('/imgdata', (req, res) => {
@@ -28,11 +28,10 @@ app.post('/imgdata', (req, res) => {
     const qrcodedata = req.body.qrdata
     qrcode.toDataURL(qrcodedata, (err, data) => {
         console.log(data);
-        res.render('qr-code',{"transfer":data})
+        res.render('qr-code', { "transfer": data })
 
 
     })
 
 })
-
 app.listen(10000)
